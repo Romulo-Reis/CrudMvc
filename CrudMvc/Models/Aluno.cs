@@ -21,7 +21,7 @@ namespace CrudMvc.Models
         [Display(Name = "E-mail")]
         public string Email { get; set; }
         [Display(Name = "Data de nascimento")]
-        [DisplayFormat(DataFormatString ="0:dd/MM/yyyy", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
         [Required]
         public bool Ativo { get; set; }

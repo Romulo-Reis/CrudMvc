@@ -17,8 +17,8 @@ namespace CrudMvc.Controllers
         // GET: Alunos
         public ActionResult Index(string busca = null)
         {
-            if (busca != null)
-                return View(db.Alunos.Where(a => a.Nome.Contains(busca)).ToList());
+            if (busca != null && !busca.Equals(""))
+                return View(db.Alunos.Where(a => a.Nome.ToUpper().Contains(busca.ToUpper())).ToList());
             return View(db.Alunos.ToList());
         }
 
